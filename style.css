@@ -1,0 +1,1109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("./assets/fonts/DM-Sans-700.ttf") format("truetype");
+}
+@font-face {
+    font-family: "nunito";
+    src: url("./assets/fonts/Nunito-600italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "figtree";
+    src: url("./assets/fonts/Figtree-500.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Clarkson";
+    src: url("./assets/fonts/clarkson-300.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("./assets/fonts/geist-font-1.8.0/geist-font-1.8.0/fonts/Geist/ttf/Geist-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+html, body{
+    font-family: "DM Sans", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+#main #homepage{
+    width: 100%;
+    height: 100%;
+}
+.homenav{
+    width: 100%;
+    height: 10vh;
+    background-color: aquamarine;
+}
+.hmnav{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hmnav .hmright{
+    width: 50%; 
+    height: 100%;
+    background-color: #0F1D1C;
+}
+.hmnav .hmright .hmnavsetu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 90px;
+}
+
+.hmright .hmnavsetu .hmnavicsn{
+    height: 100%;
+    display: flex;  
+    align-items: center;
+}
+
+.hmright .hmnavsetu .hmnavicsn img{
+    height: 50px;   /* yahan se size control hoga */
+    width: auto;
+}
+.hmright .hmnavsetu .hmnavicsn img:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.hmright .hmnavsetu .hmnvtext{
+    height: 100%;
+    display: flex;  
+    align-items: center;
+}
+.hmright .hmnavsetu .hmnvtext h4{
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    max-height: 100%;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-family: "DM Sans";
+    font-size: 24px;
+    line-height: 100%;
+    font-style: normal;
+    text-align: left;
+}
+
+.hmnav .hmleft{
+    width: 50%;
+    height: 100%;
+    background-color: #0F1D1C;
+}
+.hmleft .hmnavsec{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  /* right side align */
+    padding-right: 100px;
+}
+.hmnavsec .navbarsctio ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;          /* space between items */
+    list-style: none;
+    margin: 0px;
+    pointer-events: auto;
+    overflow: visible;
+    opacity: 1;
+    /* transform: translate(256.9px, 12px); */
+    height: 16px;
+}
+.hmnavsec .navbarsctio ul li {
+    /* Typography */
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;            /* Medium weight refined lagta hai */
+    line-height: 1.2;
+    color: #AFB0B1;              /* Rich dark grey */
+    text-transform: capitalize;  /* Clean look ke liye */
+    
+    /* Layout & Cleanliness */
+    list-style: none;
+    cursor: pointer;
+    position: relative;          /* Pseudo-element positioning ke liye */
+    overflow: hidden;            /* Background effects bahar na nikle */
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
+/* Hover Effect: Text Color Transition */
+.hmnavsec .navbarsctio ul li:hover {
+    color: #AFB0B1;                 /* Deep black on hover */
+    opacity: 0.8;                /* Subtle interaction feel */
+}
+
+/* Minimalist Animated Underline */
+.hmnavsec .navbarsctio ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;               /* Thin, elegant line */
+    background-color: currentColor; 
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hmnavsec .navbarsctio ul li:hover::after {
+    width: 100%;                 /* Full width on hover */
+}
+
+/* Smooth Transition for everything */
+.hmnavsec .navbarsctio ul li {
+    transition: all 0.3s ease;
+}
+
+
+/* Specific styling for the Connect button */
+.hmnavsec .navbarsctio ul li:last-child {
+    background-color: #000;          /* Dark black background */
+    color: #fff;                     /* White text */
+    padding: 10px 24px;              /* Button ki inner spacing (zaroori hai shape ke liye) */
+    border-radius: 50px;             /* Capsule shape */
+    font-weight: 600;                /* Thoda bold taaki standout kare */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 20px;               /* Baaki menu se thoda gap */
+    border: 1px solid transparent;
+}
+
+/* Hover effect for the Button */
+.hmnavsec .navbarsctio ul li:last-child:hover {
+    background-color: transparent;    /* Background gayab */
+    color: #AFB0B1;                     /* Text black */
+    border-color: #ED4030;              /* Outline dikhegi */
+    transform: scale(1.05);          /* Chota sa pop effect */
+    opacity: 1;                      /* Opacity full rakhein */
+}
+
+/* Connect button se purana underline effect hatane ke liye */
+.hmnavsec .navbarsctio ul li:last-child::after {
+    display: none; 
+}
+
+.homehero{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+.heroleft{
+    width: 50%; 
+    height: 100%;   
+    background-color: #FFFFFF;
+    position: relative;
+}
+.heroleft .herolftimain{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   /* 👈 ye change karo */
+    align-items: flex-start;
+    padding-left: 100px;
+    padding-top: 120px;            /* 👈 upar shift control */
+}
+
+.heroleft .herolftimain h1 {
+    font-family: "nunito";
+    font-size: 60px;
+    line-height: 120%;
+    color: #000;
+    text-align: left;   /* 👈 better hero look */
+}
+
+.heroleft .herolftimain h1 span {
+    display: block;
+}
+
+.heroleft .herolftimain .homelftfoter{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;              /* 👈 instead of space-between */
+}
+.heroleft .herolftimain .homelftfoter button {
+    font-family: "figtree";
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #000, #222);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.heroleft .herolftimain .homelftfoter button:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(135deg, #111, #333);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.heroleft .herolftimain .homelftfoter p {
+    padding-left: 20px;
+    color: rgb(164, 171, 165);
+    font-family: "figtree";
+    font-size: 15px;
+    line-height: 140%;
+    /* max-width: 260px; */
+    /* text-wrap: nowrap; */
+    transition: all 0.3s ease;   /* 👈 hover smooth banega */
+    cursor: pointer;
+}
+
+.heroleft .herolftimain .homelftfoter p:hover {
+    color: #000;
+    transform: translateX(6px);
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 360px;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 999;
+    border-radius: 14px;
+    overflow: hidden;
+
+    /* premium look */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+
+
+.heroright{
+    /* color: #FFFFFF; */
+    width: 50%;
+    height: 100%;
+    background-image: url(assets/images/lovesh.png);
+    background-size: 400px 527px; /* width height */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+     position: relative; /* IMPORTANT */
+}
+
+/* 🔥 MAIN CIRCLE WRAPPER */
+.herecirce {
+    position: absolute;
+    top: 9%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+/* 🌈 UMBRELLA GRADIENT LAYER (NEW COLORS) */
+.herecirce::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        #00f0ff,   /* cyan */
+        #7b00ff,   /* purple */
+        #ff00c8,   /* pink */
+        #ffcc00,   /* yellow */
+        #00f0ff
+    );
+
+    filter: blur(10px);
+    opacity: 0.9;
+
+    animation: spinSlow 6s linear infinite;
+}
+
+/* 🔥 MAIN RING */
+.herecirce::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    border: 4px solid transparent;
+    border-top: 4px solid #00f0ff;
+    border-right: 4px solid #ff00c8;
+
+    box-shadow: 0 0 25px rgba(0,255,255,0.6);
+
+    animation: spinFast 2s linear infinite;
+}
+
+/* 🌀 ANIMATIONS */
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spinFast {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+/* 🔥 HOVER MAGIC */
+/* .heroright:hover .herecirce {
+    transform: translate(-50%, -50%) scale(1.2);
+} */
+
+/* speed increase */
+.heroright:hover .herecirce::before {
+    animation-duration: 3s;
+}
+
+.heroright:hover .herecirce::after {
+    animation-duration: 0.6s;
+    box-shadow: 0 0 40px rgba(255,0,200,0.8);
+}
+
+
+
+/* second page work is here */
+
+#secondpage{
+    width: 100%;
+    height: 102vh;
+    /* background-color: #111; */
+    /* overflow: hidden; */
+}
+
+#secondpage .secndupparmain{
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+#secondpage .secndupparmain .scdmainleft{
+    width: 50%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+ #secondpage .secndupparmain .scdmainleft .scdtextmain {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+ }
+
+#secondpage .secndupparmain .scdmainleft .scdtextmain h1 span {
+    display: inline-block; /* 👈 ye add kar */
+    color: var(--color-black);
+    font-family: "nunito", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+
+    line-height: 1.1; /* 👈 gap control */
+}
+
+
+
+
+
+#secondpage .secndupparmain .scndmainright{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+.scndmainright .scdmainruht {
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/images/secondpage.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.scndmainright .scdmainruht .scdtextunmain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+.maintextbox {
+    width: 279px;
+    padding: 8px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.maintextbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.maintextbox:hover::before {
+    left: 0;
+}
+
+.scdrughtext {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.scdrughtext span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease, background 0.4s ease;
+}
+
+.scdrughtext h3 span {
+    font-family: "Clarkson", Helvetica, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111;
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.maintextbox:hover .scdrughtext h3 span {
+    color: white;
+}
+
+.maintextbox:hover .rotatewrap span {
+    background: white;
+}
+
+.scdrughtext {
+    width: 100%;
+    display: flex;
+}
+
+.scdrughtext h3 span {
+    font-family: "Clarkson", Helvetica, sans-serif;
+    font-size: 11px;
+    /* font-weight: 500; */
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: #111;
+    white-space: nowrap; 
+    display: inline-block;
+
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    margin-left: 20px;  
+}
+
+.pointermoving {
+    height: 20px;
+    width: 30px;
+    /* background-color: #ED4030; */
+
+    position: relative;   /* 👈 required */
+    overflow: hidden;     /* 👈 ye sabko andar rakhega */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotatewrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Common dot style */
+.rotatewrap span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 👇 ye missing tha */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* DOT 1 */
+.aidotspin1 {
+    animation-name: dot1move;
+}
+
+/* DOT 2 */
+.aidotspin2 {
+    animation-name: dot2move;
+}
+
+/* DOT 3 */
+.aidotspin3 {
+    animation-name: dot3move;
+}
+
+@keyframes dot1move {
+    0%   { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+
+    30%  { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+    50%  { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+
+    70%  { transform: translate(-50%, -50%) translate(-8px, 6px) scale(0.8); }
+
+    100% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+}
+
+@keyframes dot2move {
+    0%   { transform: translate(-50%, -50%) translate(-8px, 6px) scale(0.8); }
+
+    30%  { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+
+    60%  { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+    80%  { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+
+    100% { transform: translate(-50%, -50%) translate(-8px, 6px) scale(0.8); }
+}
+
+@keyframes dot3move {
+    0%   { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+
+    20%  { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+
+    40%  { transform: translate(-50%, -50%) translate(-8px, 6px) scale(0.8); }
+
+    70%  { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+
+    100% { transform: translate(-50%, -50%) translate(0, 6px) scale(0.5); }
+}
+
+#secondpage .scdlowermain{
+    width: 100%;
+    height: 70%;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+
+.scdlowermain .slider{
+    --slider-gap: 20px;
+    --slide-width: 320px;
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(135deg, #183532 0%, #0B1111 100%); */
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.slider .sliderwindow{
+    width: 100%;
+    height: calc(100% - 82px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    user-select: none;
+        background-color: #FFF;
+}
+
+.slider .slides{
+    width: max-content;
+    height: 64%;
+    display: flex;
+    align-items: center;
+    gap: var(--slider-gap);
+    will-change: transform;
+}
+.slides .slide{
+    flex: 0 0 var(--slide-width);
+    width: var(--slide-width);
+    border: 2px solid #000;
+    height: min(320px, 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+    font-family: "Clarkson", Helvetica, sans-serif;
+    font-size: clamp(58px, 7vw, 84px);
+    color: #fff;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+    pointer-events: auto;
+   background-size: 110%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, background-size 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slide1{
+    background-image: url('assets/images/slidpt.webp');
+}
+
+.slide2{
+    background-image: url('assets/images/slidpt.webp');
+}
+
+.slide3{
+    background-image: url('assets/images/slidpt.webp');
+}
+
+.slide4{
+    background-image: url('assets/images/slidpt.webp');
+}
+
+
+.slidecontent{
+    position: relative;
+    z-index: 2;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: all 0.4s ease 0.1s;
+}
+
+.slide:hover{
+    transform: translateY(-6px);
+    background-size: 120%;
+}
+
+.slide:hover .slidecontent{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.slide:hover::before{
+    opacity: 1;
+}
+
+
+
+.sliderbtn {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliderhover{
+    --float-x: 0px;
+    --float-y: 0px;
+    --float-rotate: 0deg;
+    width: calc(var(--slide-width) / 2 + var(--slider-gap));
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.sliderhover-left{
+    justify-content: flex-start;
+    padding-left: 18px;
+    /* background: linear-gradient(90deg, rgba(11, 17, 17, 0.62), rgba(11, 17, 17, 0)); */
+}
+
+.sliderhover-right{
+    justify-content: flex-end;
+    padding-right: 18px;
+    /* background: linear-gradient(270deg, rgba(11, 17, 17, 0.62), rgba(11, 17, 17, 0)); */
+}
+
+.sliderbtn button{
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    will-change: transform, opacity;
+}
+
+.sliderbtn .prev{
+    transform: translate3d(calc(-18px + var(--float-x)), var(--float-y), 0)
+        rotate(var(--float-rotate)) scale(0.9);
+}
+
+.sliderbtn .next{
+    transform: translate3d(calc(18px + var(--float-x)), var(--float-y), 0)
+        rotate(var(--float-rotate)) scale(0.9);
+}
+
+.sliderhover:hover button,
+.sliderhover:focus-within button{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sliderhover-left:hover .prev,
+.sliderhover-left:focus-within .prev{
+    transform: translate3d(var(--float-x), var(--float-y), 0)
+        rotate(var(--float-rotate)) scale(1);
+}
+
+.sliderhover-right:hover .next,
+.sliderhover-right:focus-within .next{
+    transform: translate3d(var(--float-x), var(--float-y), 0)
+        rotate(var(--float-rotate)) scale(1);
+}
+
+.sliderbtn button:hover{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.12));
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.3);
+}
+
+.sliderhover-left .prev:active{
+    transform: translate3d(var(--float-x), var(--float-y), 0)
+        rotate(var(--float-rotate)) scale(0.96);
+}
+
+.sliderhover-right .next:active{
+    transform: translate3d(var(--float-x), var(--float-y), 0)
+        rotate(var(--float-rotate)) scale(0.96);
+}
+
+@media (max-width: 768px) {
+    .scdlowermain .slider{
+        --slider-gap: 14px;
+        padding: 78px 18px 18px;
+    }
+
+    .sliderhover-left{
+        padding-left: 10px;
+    }
+
+    .sliderhover-right{
+        padding-right: 10px;
+    }
+
+    .slides .slide{
+        min-height: 240px;
+        padding: 20px;
+    }
+}
+
+
+
+.secodgpgfooter {
+    width: 100%;
+    height: 50px;
+    padding: 0 18px;
+    /* border-radius: 999px; */
+    /* background: #fff; */
+    /* border: 1px solid rgba(0, 0, 0, 0.15); */
+    /* backdrop-filter: blur(14px); */
+    /* box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24); */
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    /* background-color: #FFF; */
+}
+/* 
+.playpsicons{
+      margin: 0;
+      position: relative;
+}
+
+.pauseincons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      gap: 6px;
+      display: none;
+}
+
+.pauseincons span{
+      width: 4px;
+      height: 14px;
+      background: #fff;
+      display: block;
+      border-radius: 2px;
+}
+
+.playpsicons .playicons{
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.playpsicons .playicons span{
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 12px solid #fff;
+      margin-left: 2px;
+}
+ */
+
+
+ /* wrapper */
+.playpsicons{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+/* 🔥 dono icons ko same jagah pe stack kar diya */
+.pauseincons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playicons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================== PAUSE ICON ================== */
+.pauseincons{
+    gap: 6px;
+}
+
+.pauseincons span{
+    width: 4px;
+    height: 14px;
+    background: #111;
+    display: block;
+    border-radius: 2px;
+}
+
+/* ================== PLAY ICON ================== */
+.playicons span{
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid #111;
+    margin-left: 2px;
+}
+
+/* ================== DEFAULT STATE ================== */
+/* by default play show hoga */
+.playicons{
+    opacity: 1;
+}
+
+.pauseincons{
+    opacity: 0;
+}
+
+/* ================== ACTIVE (PLAY MODE) ================== */
+.playpsicons.active .pauseincons{
+    opacity: 1;
+}
+
+.playpsicons.active .playicons{
+    opacity: 0;
+}
+
+/* smooth animation */
+.pauseincons,
+.playicons{
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+.paggingindito{
+    width: 150px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gotpadding{
+    width: 32px; /* full grow area */
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* base dot */
+.gotpadding::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 4px;
+    border-radius: 999px;
+    animation-play-state: var(--dot-play-state, running);
+    background: rgba(0,0,0,0.35);
+}
+
+/* active white grow */
+.gotpadding::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 4px;
+    border-radius: 999px;
+    background: #111;
+    transform: scaleX(0.3125);
+    transform-origin: left center;
+    opacity: 0;
+    animation-play-state: running;
+}
+
+.slider.is-paused .gotpadding::after{
+    animation-play-state: paused;
+}
+
+/* one by one */
+.gotpadding:nth-child(1)::after{
+    animation: dotGrow 16s linear infinite;
+    animation-delay: 0s;
+}
+.gotpadding:nth-child(2)::after{
+    animation: dotGrow 16s linear infinite;
+    animation-delay: 4s;
+}
+.gotpadding:nth-child(3)::after{
+    animation: dotGrow 16s linear infinite;
+    animation-delay: 8s;
+}
+.gotpadding:nth-child(4)::after{
+    animation: dotGrow 16s linear infinite;
+    animation-delay: 12s;
+}
+
+@keyframes dotGrow{
+    0%{
+        transform: scaleX(0.3125);
+        opacity: 0;
+    }
+
+    4%{
+        transform: scaleX(0.3125);
+        opacity: 1;
+    }
+
+    24%{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    26%{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    28%{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+
+.footertextof{
+    font-family: "Clarkson", sans-serif;  /* 🔥 premium font */
+    font-size: 12px;
+    letter-spacing: 1.5px;   /* spacing se classy feel */
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.85);
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+}

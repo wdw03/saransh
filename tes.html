@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Pause Icon</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      background: #f4f4f4;
+    }
+
+    /* Play Icon */
+    .play-icon {
+      width: 0;
+      height: 0;
+      border-top: 35px solid transparent;
+      border-bottom: 35px solid transparent;
+      border-left: 55px solid #111;
+    }
+
+    /* Pause Icon */
+    .pause-icon {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pause-icon span {
+      width: 18px;
+      height: 70px;
+      background: #111;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="play-icon"></div>
+
+  <div class="pause-icon">
+    <span></span>
+    <span></span>
+  </div>
+
+</body>
+</html>
