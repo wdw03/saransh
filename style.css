@@ -1211,3 +1211,316 @@ body {
 
     transition: all 0.3s ease;
 }
+
+#thirdpage {
+    height: 100vh;
+    width: 100%;
+}
+
+/* #thirdmainpage {
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    background-image: url("./assets/pagethirdassets/iamges/thidbg-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 87% 78%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+} */
+
+
+#thirdmainpage {
+    width: 100%;
+    height: 100vh;
+    background-color: #0C0C0C;
+
+    background-image:
+        url("./assets/pagethirdassets/iamges/thidbg-removebg-preview.png"),
+        /* 🔝 top */
+        url("./assets/pagethirdassets/iamges/Ellipse 13.png"),
+        /* ⬅️ left */
+        url("./assets/pagethirdassets/iamges/Ellipse 14.png");
+    /* ➡️ right */
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    background-position:
+        center,
+        /* thidbg */
+        left bottom,
+        /* ellipse 13 (left) */
+        right top;
+    /* ellipse 14 (right) */
+
+    background-size:
+        87% 78%,
+        /* thidbg */
+        46%,
+        /* ellipse 13 (left size control) */
+        40%;
+    /* ellipse 14 (right size) */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.thirdleft {
+    height: 100%;
+    width: 50%;
+}
+
+.thirdlefttop {
+    width: 380px;
+    /* background-color: #ED4030; */
+    /* padding-left: 20px; */
+}
+
+
+
+.thirdlefttop h4 {
+    padding: 20px 0 0 100px;
+
+    font-size: clamp(18px, 1.8vw, 26px);
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #fff;
+
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+
+}
+
+.thirdleftmihero {
+    width: clamp(250px, 90%, 800px);
+    aspect-ratio: 17 / 10;
+    /* background-color: #ff00c8; */
+
+    margin-inline: auto;
+    margin-top: 40px;
+
+    transform: translateX(clamp(-50px, 5vw, 100px));
+}
+
+.navbarokhero {
+    height: 50px;
+    width: clamp(200px, 37vw, 400px);
+    /* 🔥 responsive width */
+    /* background-color: #7b00ff; */
+
+    margin-top: clamp(10px, 9vw, 92px);
+    /* 🔥 top gap */
+    margin-left: clamp(10px, 5vw, 60px);
+    /* 🔥 left gap */
+}
+
+
+
+.navherotp ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navherotp ul li {
+    list-style: none;
+    font-size: 15px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #000;
+
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+}
+
+/* 🔥 slash add */
+.navherotp ul li:not(:last-child)::after {
+    content: "/";
+    margin-left: clamp(8px, 1vw, 15px);
+}
+
+.thirdmiddr {
+    width: clamp(250px, 84%, 500px);
+    aspect-ratio: 5 / 2;
+    /* background-color: brown; */
+
+    transform: translate(clamp(20px, 7vw, 80px),
+            /* 👉 right shift */
+            clamp(-20px, 1vw, 60px)
+            /* 👉 top shift */
+        );
+}
+
+.thirdmidbelhrmain .yeartextherr h3 {
+    text-align: start;
+    font-size: clamp(16px, 5vw, 29px);
+    font-weight: 500;
+    font-family: "Inter";
+
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+    color: #111;
+    overflow-wrap: break-word;
+}
+
+.thirdmidbelhrmain .herotetxmible {
+    width: clamp(260px, 108%, 520px);
+    min-height: clamp(45px, 6vw, 70px);
+
+    padding: clamp(10px, 4vw, 50px) clamp(20px, 5vw, 70px);
+
+    /* background-color: #ff00c8; */
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+    /* 🔥 wrap band */
+}
+
+.thirdmidbelhrmain .herotetxmible h1 {
+    font-size: clamp(16px, 2.5vw, 30px);
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #000;
+    margin: 0;
+}
+
+.thirdfotpn {
+    width: clamp(280px, 100%, 900px);
+    height: clamp(70px, 10vw, 100px);
+
+    border-radius: 12px;
+
+    margin-top: clamp(20px, 3vw, 40px);
+    margin-left: clamp(20px, 6vw, 50px);
+
+    background-image: url(./assets/pagethirdassets/iamges/PORTFOLIO.png);
+    background-size: clamp(120px, 90%, 800px);
+    /* 🔥 perfect control */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.thirdleftfotter {
+    height: 180px;
+    width: 400px;
+    /* background-color: #ED4030; */
+}
+
+.footertmainthih {
+    height: 100%;
+    width: 100%;
+    /* background-color: #000; */
+}
+
+.footertmainthih .footertextimg {
+    width: clamp(250px, 60%, 400px);
+    /* 🔥 responsive width */
+    height: clamp(60px, 10vw, 100px);
+    /* 🔥 responsive height */
+
+    background-image: url(./assets/pagethirdassets/iamges/Group\ 34120-1.png);
+
+    background-size: clamp(100px, 25%, 220px);
+    /* 🔥 image bhi responsive */
+
+    background-position:
+        clamp(40px, 14vw, 165px)
+        /* 👉 right adjust */
+        clamp(20px, 4vw, 60px);
+    /* 👉 bottom adjust */
+
+    background-repeat: no-repeat;
+}
+
+.thirdfoterttext {
+    width: clamp(250px, 60%, 400px);
+}
+
+.thirdfoterttext .thirdletdfoter {
+    width: clamp(180px, 70%, 300px);
+    min-height: clamp(55px, 8vw, 80px);
+
+    text-align: right;
+    padding-top: clamp(16px, 3vw, 36px);
+
+    color: #ddd;
+    margin-left: 100px;
+}
+
+.thirdfoterttext .thirdletdfoter h1 {
+    margin: 0;
+    font-size: clamp(18px, 3vw, 30px);
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    line-height: 1.1;
+    letter-spacing: -0.4px;
+    white-space: nowrap;
+}
+
+.thirdfoterttext .thirdletdfoter h1 span {
+    font-size: clamp(14px, 2.2vw, 25px);
+    font-weight: 500;
+}
+
+.thirdright {
+    height: 100%;
+    width: 50%;
+}
+
+.thirdright .righttop {
+    width: 400px;
+    height: 200px;
+
+    /* background-color: #ED4030; */
+
+    margin-left: auto;
+
+    border-radius: 12px;
+}
+
+.toprightemains {
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+}
+
+.toprightemains .texttopimg {
+    width: 400px;
+    height: 40px;
+
+    /* background-color: #ED4030; */
+    background-image: url(./assets/pagethirdassets/iamges/2021.1\ —\ 2021.12.png);
+
+    background-size: clamp(120px, 70%, 300px);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.toprightemains .textbgelilips {
+    width: clamp(150px, 25vw, 200px);
+    height: clamp(80px, 12vw, 100px);
+    margin-left: auto;
+    margin-right: clamp(20px, 8vw, 120px);
+    background-image: url(./assets/pagethirdassets/iamges/Group\ 34120.png);
+    background-size: clamp(80px, 60%, 160px);
+    background-position:
+        right clamp(10px, 3vw, 30px) bottom clamp(10px, 2vw, 20px);
+
+    background-repeat: no-repeat;
+}
