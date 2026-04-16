@@ -1278,7 +1278,7 @@ body {
 }
 
 .thirdlefttop {
-    width: 380px;
+    width: clamp(240px, 60%, 380px);
     /* background-color: #ED4030; */
     /* padding-left: 20px; */
 }
@@ -1332,7 +1332,7 @@ body {
 
 .navherotp ul li {
     list-style: none;
-    font-size: 15px;
+    font-size: clamp(12px, 1.2vw, 15px);
 
     font-family: 'Inter', sans-serif;
     font-weight: 300;
@@ -1417,8 +1417,8 @@ body {
 
 
 .thirdleftfotter {
-    height: 180px;
-    width: 400px;
+    width: clamp(260px, 65%, 400px);
+    height: clamp(120px, 18vw, 180px);
     /* background-color: #ED4030; */
 }
 
@@ -1460,7 +1460,7 @@ body {
     padding-top: clamp(16px, 3vw, 36px);
 
     color: #ddd;
-    margin-left: 100px;
+    margin-left: clamp(20px, 8vw, 100px);
 }
 
 .thirdfoterttext .thirdletdfoter h1 {
@@ -1484,8 +1484,8 @@ body {
 }
 
 .thirdright .righttop {
-    width: 400px;
-    height: 200px;
+    width: clamp(240px, 60%, 400px);
+    height: clamp(120px, 25vw, 200px);
 
     /* background-color: #ED4030; */
 
@@ -1501,8 +1501,8 @@ body {
 }
 
 .toprightemains .texttopimg {
-    width: 400px;
-    height: 40px;
+    width: clamp(220px, 60%, 400px);
+    height: clamp(30px, 5vw, 40px);
 
     /* background-color: #ED4030; */
     background-image: url(./assets/pagethirdassets/iamges/2021.1\ —\ 2021.12.png);
@@ -1521,6 +1521,36 @@ body {
     background-size: clamp(80px, 60%, 160px);
     background-position:
         right clamp(10px, 3vw, 30px) bottom clamp(10px, 2vw, 20px);
+    background-repeat: no-repeat;
+}
 
+.rightmiddle {
+    width: clamp(100px, 10vw, 400px);
+    aspect-ratio: 2 / 1;
+    max-width: 100%;
+    /* background-color: #7b00ff; */
+
+    background-image: url(./assets/pagethirdassets/iamges/image\ 1154.png);
+    background-size: clamp(120px, 80%, 400px);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rightbotmfoter {
+    width: clamp(220px, 40vw, 400px);
+    height: clamp(120px, 35vw, 450px);
+
+    /* background-color: #ff00c8; */
+
+    margin-left: auto;
+    margin-right: clamp(20px, 10vw, 150px);
+    /* 🔥 balanced */
+    /* margin-top: clamp(20px, 4vw, 60px); */
+
+    background-image: url(./assets/pagethirdassets/iamges/image\ 15.png);
+
+    background-size: clamp(80px, 100%, 1000px);
+    /* 🔥 image control */
+    background-position: center;
     background-repeat: no-repeat;
 }
