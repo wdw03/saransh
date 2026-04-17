@@ -302,21 +302,21 @@ const slides = document.querySelectorAll(".slide");
 
 function slideshober() {
     slides.forEach((slide) => {
-        slide.addEventListener("mouseenter" , () => {
-            gsap.to(slide , {
+        slide.addEventListener("mouseenter", () => {
+            gsap.to(slide, {
                 backgroundPosition: "50% 0%",
                 duration: 0.8,
                 ease: "power3.out",
                 overwrite: "auto"
             })
         })
-        slide.addEventListener("mouseleave" , () => {
-            gsap.to(slide , {
+        slide.addEventListener("mouseleave", () => {
+            gsap.to(slide, {
                 backgroundPosition: "50% 100%",
                 duration: 0.8,
                 ease: "power3.out",
                 overwrite: "auto"
-            }) 
+            })
         })
     });
 }
