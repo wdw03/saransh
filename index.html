@@ -10,12 +10,13 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="main">
-        <div id="homepage">
+    <div id="main" data-scroll-container>
+        <div id="homepage" data-scroll-section>
             <div class="homenav">
                 <div class="hmnav">
                     <div class="hmright">
@@ -61,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div id="thirdpage">
+        <div id="thirdpage" data-scroll-section>
             <div id="thirdmainpage">
                 <div class="thirdleft">
                     <div class="thirdlefttop">
@@ -113,7 +114,7 @@
                 </div>
             </div>
         </div>
-        <div id="secondpage">
+        <div id="secondpage" data-scroll-section>
             <div class="secndupparmain">
                 <div class="scdmainleft">
                     <div class="scdtextmain">
@@ -202,6 +203,8 @@
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 <script src="sss.js"></script>
 
 </html>

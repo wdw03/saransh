@@ -1,6 +1,32 @@
 const spans = document.querySelectorAll(".herolftimain h1 span");
 const hoverImg = document.querySelector(".hover-image");
 
+
+// 👇 sabse pehle
+gsap.registerPlugin(ScrollTrigger);
+
+const loco = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true
+});
+
+loco.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+        return arguments.length
+            ? loco.scrollTo(value, 0, 0)
+            : loco.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    }
+});
+
+ScrollTrigger.addEventListener("refresh", () => loco.update());
+ScrollTrigger.refresh();
+
+
 if (hoverImg && spans.length && typeof gsap !== "undefined") {
     gsap.set(hoverImg, {
         xPercent: -50,

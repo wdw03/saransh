@@ -39,12 +39,17 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: auto;
+}
+
+[data-scroll-container] {
+    overflow: hidden;
 }
 
 #main {
     width: 100%;
     min-height: 100vh;
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 #main #homepage {
@@ -55,7 +60,7 @@ body {
 .homenav {
     width: 100%;
     height: 10vh;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 .hmnav {
@@ -70,7 +75,7 @@ body {
 .hmnav .hmright {
     width: 50%;
     height: 100%;
-    background-color: #0F1D1C;
+    background-color: #C4BCB3;
 }
 
 .hmnav .hmright .hmnavsetu {
@@ -109,7 +114,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     background: none;
-    color: rgb(255, 255, 255);
+    color: #2F2F2F;
     font-family: "DM Sans";
     font-size: clamp(16px, 1.5vw, 24px);
     line-height: 100%;
@@ -120,7 +125,7 @@ body {
 .hmnav .hmleft {
     width: 50%;
     height: 100%;
-    background-color: #0F1D1C;
+    background-color: #C4BCB3;
 }
 
 .hmleft .hmnavsec {
@@ -154,7 +159,7 @@ body {
     font-weight: 500;
     /* Medium weight refined lagta hai */
     line-height: 1.2;
-    color: #AFB0B1;
+    color: #2F2F2F;
     /* Rich dark grey */
     text-transform: capitalize;
     /* Clean look ke liye */
